@@ -24,6 +24,10 @@ When you ask a server to return a response, you need to direct your request to a
 
 Now, take the following domain: `www.mydomain.com/login`. This looks a little different than `www.google.com`, mostly because of the `/login` part. This is known as the route, or the path. Once you own the domain `www.mydomain.com`, you can have an infinite number of routes on that domain. You are not limited by any concrete number - you can parse and interpret the routes in whatever way you please. We'll dive much deeper into that when we jump into the backend (remember - all of this is still mostly on the frontend side of things).
 
+## Query Strings
+
+Query strings, similar to headers, are a way to add extra context to a request. For example, Google uses query strings to encode your search query: `www.google.com/?q=Boston%20College` (We'll cover `%20` later, but for now just know that it means "Space" to Google.) Unlike routes, extraneous or wrong query parameters do not automatically throw 404 errors. If you went to `www.google.com/adfkajsdflkasjfsdkfj`, you'll get a 404 error. But if you go to `www.google.com/?the_best=boston-college` you'll just get Google's homepage. They don't care about that extra data because they're simply not looking for it.
+
 ## HTTP Verbs
 
 Before covering requests, let's talk about the different types of requests. These are called HTTP verbs and the ones that you'll mainly be dealing with are `GET` `POST`  `PUT` and `DELETE`. There's a link in the section at the bottom to the full list of verbs if you're interested. These four verbs are the basics of Restful API's and allow you to Create, Read, Update, and Delete objects. 
@@ -93,10 +97,6 @@ A critical part of all responses is the status code that is returned. There are 
 Notice the pattern with the codes here - codes that start with `2` are good, codes that start with `4` indicate a fixable problem, and codes that start with `5` mean that something needs to be fixed on the server's end.
 
 We're going to be talking a lot about the correct codes to send in the correct situations. Similar to other protocols that exist, there is no strict definition of when to use each code for each purpose in the sense that your application will not break if you use `400` to indicate success. However, that's the wrong way of doing things, as the client will probably interpret that incorrectly.
-
-## Query Strings
-
-Query strings, similar to headers, are a way to add extra context to a request. For example, Google uses query strings to encode your search query: `www.google.com/?q=Boston%20College` (We'll cover `%20` later, but for now just know that it means "Space" to Google.) Unlike routes, extraneous or wrong query parameters do not automatically throw 404 errors. If you went to `www.google.com/adfkajsdflkasjfsdkfj`, you'll get a 404 error. But if you go to `www.google.com/?the_best=boston-college` you'll just get Google's homepage. They don't care about that extra data because they're simply not looking for it.
 
 ## HTML
 
