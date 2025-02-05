@@ -10,6 +10,7 @@ The purpose of this course is to be able to understand the fundamentals of and c
 6. TBD
 
 ## 1. HTTP Requests + GitHub
+Notes: https://github.com/bdweix/bc-web-apps/blob/main/notes/week-1.md
 Objective: Understand the basic types of web requests used to communicate and how they differ. By the conclusion of this section, students will be able to differentiate between different HTTP requests and formulate their own based on given criteria. 
 
 - Headers
