@@ -14,6 +14,16 @@ Below is a recap of all of the topics that we touched on in the first class. Eac
 2. Inspect 1 website using Chrome Dev Tools and explore the HTML - [Tutorial Here](https://medium.com/@branick/introduction-to-chrome-developer-tools-a67f225793b2)
 3. Setup Github if you don't already have an account ([registration link](https://github.com/))
 
+## Routes
+
+When you ask a server to return a response, you need to direct your request to a specific URL. Typically, people think about URLs as `www.google.com`. Let's break that down:
+
+- `www` is the subdomain. Like we talked about in class, these are often used for vanity purposes rather than technical reasons, although we'll cover this more when we get to the deployment section.
+- `google` is the root domain.
+- `.com` is the TLD, or Top Level Domain. These are regulated by ICANN and some of them are restricted - you can't go out and buy a `.gov` TLD, because that would be insanity.
+
+Now, take the following domain: `www.mydomain.com/login`. This looks a little different than `www.google.com`, mostly because of the `/login` part. This is known as the route, or the path. Once you own the domain `www.mydomain.com`, you can have an infinite number of routes on that domain. You are not limited by any concrete number - you can parse and interpret the routes in whatever way you please. We'll dive much deeper into that when we jump into the backend (remember - all of this is still mostly on the frontend side of things).
+
 ## HTTP Verbs
 
 Before covering requests, let's talk about the different types of requests. These are called HTTP verbs and the ones that you'll mainly be dealing with are `GET` `POST`  `PUT` and `DELETE`. There's a link in the section at the bottom to the full list of verbs if you're interested. These four verbs are the basics of Restful API's and allow you to Create, Read, Update, and Delete objects. 
@@ -83,16 +93,6 @@ A critical part of all responses is the status code that is returned. There are 
 Notice the pattern with the codes here - codes that start with `2` are good, codes that start with `4` indicate a fixable problem, and codes that start with `5` mean that something needs to be fixed on the server's end.
 
 We're going to be talking a lot about the correct codes to send in the correct situations. Similar to other protocols that exist, there is no strict definition of when to use each code for each purpose in the sense that your application will not break if you use `400` to indicate success. However, that's the wrong way of doing things, as the client will probably interpret that incorrectly.
-
-## Routes
-
-When you ask a server to return a response, you need to direct your request to a specific URL. Typically, people think about URLs as `www.google.com`. Let's break that down:
-
-- `www` is the subdomain. Like we talked about in class, these are often used for vanity purposes rather than technical reasons, although we'll cover this more when we get to the deployment section.
-- `google` is the root domain.
-- `.com` is the TLD, or Top Level Domain. These are regulated by ICANN and some of them are restricted - you can't go out and buy a `.gov` TLD, because that would be insanity.
-
-Now, take the following domain: `www.mydomain.com/login`. This looks a little different than `www.google.com`, mostly because of the `/login` part. This is known as the route, or the path. Once you own the domain `www.mydomain.com`, you can have an infinite number of routes on that domain. You are not limited by any concrete number - you can parse and interpret the routes in whatever way you please. We'll dive much deeper into that when we jump into the backend (remember - all of this is still mostly on the frontend side of things).
 
 ## Query Strings
 
